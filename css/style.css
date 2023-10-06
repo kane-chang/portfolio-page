@@ -1,3 +1,9 @@
+:root {
+  --background-color: black;
+  --header-font-color: black;
+  --accent-color: aquamarine; 
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,4 +26,82 @@ h6 {
 
 p {
   margin: 0;
+}
+
+header {
+  display: flex;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  background-color: var(--accent-color);
+  margin: 20px 0;
+  padding: 0 10px 0 50px;
+  color: var(--header-font-color);
+  font-size: 7vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding-right: 5%;
+}
+
+nav a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--accent-color);
+  font-size: 3vh;
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.hero-banner {
+  height: 230px;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-banner h2 {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  width: 30%;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+}
+
+.page-wrapper {
+  display: flex;
+  padding: 50px 10%;
+  flex-direction: column;
+  background-color: green;
+}
+
+.page-wrapper h2 {
+  font-size: 7vh;
+  text-align: right;
+  padding-right: 20px;
+  min-width: 15%;
+  max-width: 15%;
+  background-color: red;
+}
+
+#about, #work, #contact {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: blue;
+}
+
+.about-content, .project-container, .contact-container {
+  border-left: 4px solid var(--header-font-color);
+  padding-left: 40px;
+  background-color: grey;
+}
+
+.project-container img {
+  width: 200px;
 }
