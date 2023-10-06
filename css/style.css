@@ -102,6 +102,41 @@ nav a {
   background-color: grey;
 }
 
-.project-container img {
-  width: 200px;
+.project-container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template-areas: 
+    "project1 project1"
+    "project2 project3"
+    "project4 project5"
+  ;
+}
+
+#project-1 {
+  grid-area: project1;
+  background: purple;
+}
+
+#project-2 {
+  grid-area: project2;
+  background: purple;
+}
+
+#project-3 {
+  grid-area: project3;
+  background: purple;
+}
+
+#project-4 {
+  grid-area: project4;
+  background: purple;
+}
+
+#project-5 {
+  grid-area: project5;
+  background: purple;
+}
+
+img {
+ height: 300px;
 }
