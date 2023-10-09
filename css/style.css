@@ -1,3 +1,9 @@
+:root {
+  --background-color: black;
+  --header-font-color: black;
+  --accent-color: aquamarine; 
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,4 +26,166 @@ h6 {
 
 p {
   margin: 0;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  background-color: var(--background-color);
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  background-color: var(--accent-color);
+  margin: 20px 0;
+  padding: 0 10px 0 50px;
+  color: var(--header-font-color);
+  font-size: 7vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding-right: 5%;
+}
+
+nav a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--accent-color);
+  font-size: 3vh;
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.hero-banner {
+  height: 230px;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-banner h2 {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  width: 40%;
+  min-width: 420px;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  padding: 5px;
+}
+
+.page-wrapper {
+  display: flex;
+  padding: 50px 10%;
+  flex-direction: column;
+  /* background-color: green; */
+}
+
+.page-wrapper h2 {
+  font-size: 6vh;
+  text-align: right;
+  padding-right: 20px;
+  min-width: 15%;
+  max-width: 15%;
+  /* background-color: red; */
+}
+
+#about, #work, #contact {
+  display: flex;
+  margin-bottom: 30px;
+  /* background-color: blue; */
+}
+
+.about-content, .project-container, .contact-container {
+  border-left: 4px solid var(--header-font-color);
+  padding-left: 40px;
+  /* background-color: grey; */
+}
+
+.project-container {
+  display: grid;
+  width: 100%;
+  /* background: peru; */
+  grid-template-rows: 400px 200px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "project1 project1"
+    "project2 project3"
+    "project4 project5"
+  ;
+}
+
+#project-1 {
+  grid-area: project1;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#project-2 {
+  grid-area: project2;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project-3 {
+  grid-area: project3;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#project-4 {
+  grid-area: project4;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#project-5 {
+  grid-area: project5;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+
+.project-heading {
+  background-color: var(--accent-color);
+  color: var(--header-font-color);
+  padding: 15px;
+  font-size: 18px;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.project {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  border: 5px solid var(--accent-color);
+  text-decoration: none;
+}
+
+.project:hover {
+  opacity: 0.8;
+  transition: .5s ease;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-container a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--header-font-color);
+  font-size: 3vh;
+  text-decoration: none;
+  border-bottom: 3px solid var(--header-font-color);
+}
+
+.contact-container a:hover, nav a:hover {
+  filter: brightness(0.7);
+  transition: .5s ease;
 }
