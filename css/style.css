@@ -57,13 +57,15 @@ nav a {
   font-size: 3vh;
   text-decoration: none;
   border-bottom: 3px solid var(--accent-color);
+  text-wrap: nowrap;
 }
 
 .hero-banner {
-  height: 230px;
-  background-image: url("../images/02-hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 300px;
+  background-image: url("../images/P1010142.JPG");
+  background-repeat: repeat-x;
+  background-size: 1500px;
+  background-position: center;
 }
 
 .hero-banner h2 {
@@ -90,17 +92,16 @@ nav a {
   padding-right: 20px;
   min-width: 15%;
   max-width: 15%;
+  border-right: 4px solid var(--header-font-color);
   /* background-color: red; */
 }
 
 #about, #work, #contact {
   display: flex;
   margin-bottom: 30px;
-  /* background-color: blue; */
 }
 
 .about-content, .project-container, .contact-container {
-  border-left: 4px solid var(--header-font-color);
   padding-left: 40px;
   /* background-color: grey; */
 }
@@ -189,3 +190,79 @@ nav a {
   filter: brightness(0.7);
   transition: .5s ease;
 }
+
+
+/* Responsive Layout CSS */
+
+@media only screen and (max-width: 1300px) {
+  #about, #work, #contact {
+    flex-direction: column;
+  }
+  .page-wrapper h2 {
+    font-size: 6vh;
+    align-self: center;
+    text-align: center;
+    padding-right: none;
+    min-width: 15%;
+    max-width: 70%;
+    border-right: none;
+  }
+  
+  #contact h2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "project1"
+    "project2" 
+    "project3"
+    "project4" 
+    "project5"
+  ;
+  }
+  nav a {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav a {
+    display: none;
+  }
+}
+/* @media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .icons {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+  #heroGrid {
+    grid-template-areas:
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
+  }
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookcases"
+      "bedroom"
+      "patio"
+      "couches"
+      "desks"
+    ;
+  }
+} */
